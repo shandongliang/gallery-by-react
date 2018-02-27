@@ -1,0 +1,164 @@
+/* Base Application Styles */
+@font-face {
+  font-family: 'icons-turn-arrow';
+  src: url("../fonts/icons/turn-arrow.eot?2qevqt");
+  src: url("../fonts/icons/turn-arrow.eot?2qevqt#iefix") format('embedded-opentype'), url("../fonts/icons/turn-arrow.ttf?2qevqt") format('truetype'), url("../fonts/icons/turn-arrow.woff?2qevqt") format('woff'), url("../fonts/icons/turn-arrow.svg?2qevqt#icons-turn-arrow") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  background-color: #222;
+  width: 100%;
+  height: 100%;
+}
+html .content,
+body .content {
+  width: 100%;
+  height: 100%;
+}
+html .content .stage,
+body .content .stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+html .content .stage .img-sec,
+body .content .stage .img-sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ddd;
+  perspective: 1800px;
+}
+html .content .stage .img-sec .img-figure,
+body .content .stage .img-sec .img-figure {
+  position: absolute;
+  width: 320px;
+  height: 360px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: none;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out, left 0.6s ease-in-out, top 0.6s ease-in-out;
+}
+html .content .stage .img-sec .img-figure .wrap-position,
+body .content .stage .img-sec .img-figure .wrap-position {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-back,
+body .content .stage .img-sec .img-figure .wrap-position .img-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 40px;
+  overflow: auto;
+  color: #a7a0a2;
+  font-size: 22px;
+  line-height: 1.25;
+  text-align: left;
+  box-sizing: border-box;
+  transform: translate(320px) rotateY(180deg) translateZ(1px);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out, left 0.6s ease-in-out, top 0.6s ease-in-out;
+  transform-origin: 0 50% 0;
+  background: #fff;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-content,
+body .content .stage .img-sec .img-figure .wrap-position .img-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out, left 0.6s ease-in-out, top 0.6s ease-in-out;
+  transform-origin: 0 50% 0;
+  backface-visibility: hidden;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-content figcaption,
+body .content .stage .img-sec .img-figure .wrap-position .img-content figcaption {
+  text-align: center;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-content figcaption .img-title,
+body .content .stage .img-sec .img-figure .wrap-position .img-content figcaption .img-title {
+  margin: 20px 0 0 0;
+  color: #a7a0a2;
+  font-size: 16px;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-content .img-wrap,
+body .content .stage .img-sec .img-figure .wrap-position .img-content .img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+html .content .stage .img-sec .img-figure .wrap-position .img-content .img-wrap img,
+body .content .stage .img-sec .img-figure .wrap-position .img-content .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+html .content .stage .img-sec .img-figure.is-inverse .img-back,
+body .content .stage .img-sec .img-figure.is-inverse .img-back {
+  transform: translate(0px) rotateY(0deg) translateZ(1px);
+}
+html .content .stage .img-sec .img-figure.is-inverse .img-content,
+body .content .stage .img-sec .img-figure.is-inverse .img-content {
+  transform: translate(320px) rotateY(180deg) translateZ(1px);
+}
+html .content .stage .controller-nav,
+body .content .stage .controller-nav {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  z-index: 101;
+  text-align: center;
+}
+html .content .stage .controller-nav .controller-unit,
+body .content .stage .controller-nav .controller-unit {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+  background: #aaa;
+  border-radius: 50%;
+  transform: scale(0.5);
+  vertical-align: middle;
+  transition: transform 0.6s ease-in-out, background-color 0.3s;
+}
+html .content .stage .controller-nav .controller-unit.is-center,
+body .content .stage .controller-nav .controller-unit.is-center {
+  background: #888;
+  transform: scale(1);
+}
+html .content .stage .controller-nav .controller-unit.is-center::after,
+body .content .stage .controller-nav .controller-unit.is-center::after {
+  font-family: "icons-turn-arrow";
+  content: "\e600";
+  font-size: 80%;
+  color: #fff;
+  line-height: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html .content .stage .controller-nav .controller-unit.is-center.is-inverse,
+body .content .stage .controller-nav .controller-unit.is-center.is-inverse {
+  background: #555;
+  transform: rotateY(180deg);
+}

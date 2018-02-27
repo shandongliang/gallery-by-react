@@ -16,7 +16,7 @@
   <br>具体npm run　操作可参考项目的中package.json文件
   
   #### github web服务在线地址
-  https://zoujian3820.github.io/gallery-by-react/
+  https://github.com/shandongliang/gallery-by-react
   ![](https://github.com/zoujian3820/gallery-by-react/blob/master/src/gitdemo.gif "github web server")
  
 # gallery-by-react
